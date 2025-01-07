@@ -4,7 +4,11 @@ const nextConfig = {
     output: 'export',
     typescript: {
         ignoreBuildErrors: true
-    }
+    } , 
+    webpack: (config) => {
+        // Custom webpack configuration
+        return config;
+    },
 };
 
 export default withSentryConfig(nextConfig, {
